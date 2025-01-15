@@ -16,3 +16,12 @@ table{
     padding: 2px;
     margin:2px;
 }
+div{
+    color:aliceblue;
+    background-color: red;
+}
+
+.city{
+    color:rebeccapurple;
+    font-family: 'Courier New', Courier, monospace;
+}
