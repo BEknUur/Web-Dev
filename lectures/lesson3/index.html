@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lesson 2</title>
+    </head>
+    <body>
+        <h1>JS examples</h1>
+
+        <script>
+            console.log('Hello, world!');
+            var age=20;
+            var dict={
+                name:'John',
+                age
+            }
+            console.log(dict);
+            var arr=[1,2,3,4,5];
+        
+
+            //Condtions /*
+            var a='beknur';
+            var b=5;
+            if(a<b)console.log('a is less than b');
+            else console.log('a is greater than b');
+
+
+            //loops using for
+            var arr=[1,2,3,4,5];
+            for(var i=0;i<arr.length;i++){
+                console.log(arr[i]);
+            };
+            console.log(i);
+            // use the for this syntax
+            /*
+            for (const num of arr){
+                console.log(num);
+            }
+                
+                */
+               console.log("\n");
+
+          
+               var arr=[1,0,3,-2,5];
+               function beknur(arr){
+                var sum=0;
+                for(var i=0;i<arr.length;i++){
+                    sum+=arr[i];
+                }
+                return sum;
+               }
+
+               function print(arr){
+                for(var i=0;i<arr.length;i++){
+                    console.log(arr[i]);
+                }
+
+               }
+                console.log(beknur(arr));
+                arr.push(6);
+                console.log(print(arr));
+
+                console.log(arr.sort());
+                console.log(arr.reverse());
+
+
+                let newarr=arr.map(function(val, index){
+                    return val*index;
+        
+                })
+                    
+                console.log(newarr);
+
+                let bekzat=arr.slice(2,4);
+                console.log(bekzat);
+                console.log(arr);
+let ab=document;
+console.log(ab);
+
+
+            </script>
+    </body>
+    </html>

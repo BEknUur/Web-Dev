@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      padding: 20px;
+      line-height: 2;
+      font-family: Arial, sans-serif;
+    }
+
+    .inline-border {
+      border: 2px solid red;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    .block-border {
+      border: 2px solid blue;
+      padding: 5px;
+      margin: 10px;
+      display: block;
+    }
+
+    .inline-block-border {
+      border: 2px solid green;
+      padding: 5px;
+      margin: 10px;
+      display: inline-block;
+    
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>
+      Это обычный текст, а 
+      <span class="inline-border">это inline элемент с границей</span>
+      который продолжается на следующей строке
+      <span class="inline-border">и вот еще один</span>.
+    </p>
+
+    <p>
+      А это <span class="block-border">block элемент</span> с границей.
+    </p>
+
+    <p>
+      И наконец <span class="inline-block-border">inline-block элемент</span> с границей.
+    </p>
+  </div>
+</body>
+</html>
