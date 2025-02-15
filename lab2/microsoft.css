@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
+    padding: 0 25px;
     height: 54px;
 }
 
@@ -24,7 +24,7 @@
     font-family:'Times New Roman', Times, serif;
 }
 .nav-left img {
-    width: 108px;
+    width: 110px;
 }
 
 .nav-links {
@@ -45,7 +45,7 @@
     padding: 12px;
     text-align: center;
     font-size: 17px;
-    font-weight: 600;
+    font-weight:500;
 }
 
 .banner a {
@@ -64,7 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 5%;
+    padding-left: 30;
     height: 500px;
 }
 
@@ -128,7 +128,7 @@
 
 
 .cards {
-    display: grid;
+    display:grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     padding: 0 5%;

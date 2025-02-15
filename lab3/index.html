@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            cursor: grab;
+        }
+        .check-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="taskList"></ul>
+    
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button id="addTaskButton">Add</button>
+    <button id="clearTasksButton">Clear</button>
+    <button id="checkAllButton">Check All</button>
+
+    <script>
+        const taskInput = document.getElementById("taskInput");
+        const taskList = document.getElementById("taskList");
+        const addTaskButton = document.getElementById("addTaskButton");
+        const clearTasksButton = document.getElementById("clearTasksButton");
+        const checkAllButton = document.getElementById("checkAllButton");
+
+        function addTask() {
+            const taskText = taskInput.value.trim();
+            if (taskText !== "") {
+                const listItem = document.createElement("li");
+                listItem.draggable = true;
+
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+
+                const taskSpan = document.createElement("span");
+                taskSpan.textContent = taskText;
+
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.classList.add("check-button");
+
+                listItem.appendChild(checkbox);
+                listItem.appendChild(taskSpan);
+                listItem.appendChild(deleteButton);
+
+                
+               taskList.insertBefore(listItem,taskList.firstChild);
+                taskInput.value = "";
+
+                checkbox.addEventListener("change", function () {
+                    taskSpan.style.textDecoration = this.checked ? "line-through" : "none";
+                });
+
+                deleteButton.addEventListener("click", function () {
+                    taskList.removeChild(listItem);
+                });
+
+            
+            }
+        }
+
+        function clearTasks() {
+            taskList.innerHTML = "";
+        }
+
+        function checkAllTasks() {
+            const checkboxes = taskList.querySelectorAll("input[type='checkbox']");
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = true;
+                checkbox.dispatchEvent(new Event("change")); 
+            });
+        }
+
+        addTaskButton.addEventListener("click", addTask);
+        taskInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                addTask();
+            }
+        });
+
+        clearTasksButton.addEventListener("click", clearTasks);
+        checkAllButton.addEventListener("click", checkAllTasks);
+    </script>
+
+</body>
+</html>
