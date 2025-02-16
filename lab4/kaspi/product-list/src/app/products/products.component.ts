@@ -84,13 +84,18 @@ export class ProductsComponent {
 
   ];
 
-  shareOnWhatsApp(phone: string, link: string): void {
+  shareOnWhatsApp(phone: string='+77756553005', link: string): void {
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent('📱 Посмотрите: ' + link)}`, '_blank');
   }
   
-  shareOnTelegram(usernameOrGroup: string, link: string): void {
-    window.open(`https://t.me/${usernameOrGroup}?text=${encodeURIComponent('📩 Посмотрите: ' + link)}`, '_blank');
+  shareOnTelegram(usernameOrGroup: string = 'odinelit', link: string): void {
+    window.open(
+      `https://t.me/${usernameOrGroup}?text=${encodeURIComponent('📩 Посмотрите: ' + link)}`,
+      '_blank'
+    );
   }
+  
+  
   
   
 }

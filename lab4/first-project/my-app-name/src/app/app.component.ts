@@ -6,7 +6,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [
-    HomeComponent,
+    
     RouterLink,
     RouterOutlet,
   ],
