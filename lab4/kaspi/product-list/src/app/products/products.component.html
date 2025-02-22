@@ -1,5 +1,7 @@
 <h2 class="catalog-title">Каталог товаров</h2>
 
+
+
 <div class="products-container">
   <div class="product-card" *ngFor="let product of products">
     <div class="gallery">
@@ -19,7 +21,6 @@
       <button (click)="shareOnTelegram('odinelit', product.link)">
         📩 Поделиться в Telegram
       </button>
-      
     </div>
   </div>
 </div>
