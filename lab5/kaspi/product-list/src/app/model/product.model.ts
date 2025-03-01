@@ -1,4 +1,3 @@
-import { NumberSymbol } from "@angular/common";
 
 export interface Product{
   id:number;

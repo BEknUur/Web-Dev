@@ -22,7 +22,8 @@
     <p>⭐ {{ product.rating }}</p>
     <p>❤️ {{ product.likes }}</p>
     </div>
-    <a [href]="product.link" target="_blank" >Подробнее</a>
+    <a [routerLink]="['/product', product.id]"  class="details-button">Подробнее</a>
+    
 
   
     <div class="action-buttons">

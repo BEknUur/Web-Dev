@@ -1,18 +1,8 @@
 import { Routes } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailComponent } from './product-detail/product_detail.component';
 
-import { AppComponent } from './app.component';
-import { NewComponent } from './page/new.component';
-
-const routeConfig:Routes=[
-  {
-    path:'',
-    component:AppComponent,
-    title:'Home page'
-  },
-  {
-    path:'details/',
-    component:NewComponent,
-    title:'Details'
-  }
+export const routes: Routes = [
+  { path: '', component: ProductsComponent }, 
+  { path: 'product/:id', component: ProductDetailComponent } 
 ];
-export default routeConfig
