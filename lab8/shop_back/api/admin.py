@@ -18,3 +18,4 @@ class ProductAdmin(admin.ModelAdmin):
         return obj.category.name
     
     get_category.short_description = 'Category'
+    
